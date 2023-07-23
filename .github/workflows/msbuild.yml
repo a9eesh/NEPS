@@ -11,4 +11,4 @@ jobs:
 
     - name: Build
       shell: cmd
-      run: msbuild /m NEPS.sln /p:Platform=x64 /p:Configuration=Release
+      run: msbuild /m NEPS.sln /p:Platform=x86 /p:Configuration=Release
