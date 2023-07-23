@@ -12,3 +12,13 @@ jobs:
     - name: Build
       shell: cmd
       run: msbuild /m NEPS.sln /p:Platform=x86 /p:Configuration=Release
+
+    - name: Automatic Releases
+      uses: marvinpinto/action-automatic-releases@v1.2.1
+      with:
+          repo_token: "${{ secrets.API_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Auto Build"
+          files: |
+            NEPS.dll
